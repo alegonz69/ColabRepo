@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#grilla {
+    display: grid;
+    grid-template-areas:
+    /* "encabezado encabezado encabezado" */
+    "navegation navegation navegation"
+    "primaria secundaria aside"
+    ;
+    background-color: rgb(18, 54, 54);
+    gap: 10px;
+    height: 100vh;
+    grid-template-columns: 1fr 2fr 1fr ;
+    grid-template-rows: 0.2fr 2fr ;
+}
+
+#grilla nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#grilla nav ul li {
+    display: flex;
+    list-style-type: none;
+    /* padding: 60px; */
+    align-items: center;
+}
+
+#grilla nav ul li a {
+    text-decoration: none;
+}
+
+header {
+    grid-area: encabezado;
+    background-image: url(../assets/images/Pasto.jpg);
+    color: rgb(212, 190, 190);
+    background-position: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+header div {
+  width: 10%;
+}
+
+header div img {
+    width: 100%;
+}
+
+nav {
+    grid-area: navegation;
+    display: flex;
+}
+
+#section1 {
+    grid-area: primaria;
+}
+
+#section2 {
+    grid-area: secundaria;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    background-color: aqua;
+    padding: 55px;
+}
