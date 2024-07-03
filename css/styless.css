@@ -4,75 +4,545 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Slab:ital@0;1&family=Playfair+Display:ital@0;1&display=swap');
 
-#grilla {
-    display: grid;
-    grid-template-areas:
-    /* "encabezado encabezado encabezado" */
-    "navegation navegation navegation"
-    "primaria secundaria aside"
-    ;
-    background-color: rgb(18, 54, 54);
-    gap: 10px;
-    height: 100vh;
-    grid-template-columns: 1fr 2fr 1fr ;
-    grid-template-rows: 0.2fr 2fr ;
+
+/* DISPOSITIVOS */
+
+@media screen and (max-width: 768px) {
+    
+    /* ENCABEZADO-HEADER */
+
+    header {
+        padding: 2vh;
+        background-image: url(/assets/images/Body/cieloargentino.jpg);
+        color: rgb(53, 10, 10);
+        font-style: normal;
+        background-size: cover;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+    }
+    
+    header .containerheader {
+        width: 70vh;
+        word-spacing: 1px;
+        margin-right: 15px;
+    }
+
+    header div h6  {
+        text-decoration: underline;
+    }
+
+    /* IMAGEN LOGO HEADER */
+
+    header .containerlogo {
+        width: 30vh;
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    /* BARRA NAVEGACION */
+
+    nav ul li a{
+        font-size: 50px;
+    }
+
+    nav ul li {
+        align-content: center;
+    }
+
+    /* BODY/MAIN */
+
+
+    main .sec-noticia .sec-noticia1 {
+      padding: 10px;
+    }
+
+    main .sec-noticia .sec-noticia1 article div img {
+      width: 100%;
+    }
+
+    main .sec-noticia .sec-noticia1 article h2 {
+      background-color: #473c3c;
+      color: #fff;
+      border-radius: 20px;
+    }
+
+    main .sec-noticia .sec-noticia2 {
+      padding: 10px;
+    }
+
+    main .sec-noticia .sec-noticia2 article div {
+      display: flex;
+      align-items: center;
+    }
+
+    main .sec-noticia .sec-noticia2 article div img {
+      width: 40%;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      border-radius: 20px;
+      /* height: 95%; */
+    }
+
+    .textcenter {
+      text-align: center;
+    }
+
+
+    .textnegrita {
+      font-weight: bold;
+    }
+
+    .subrayado-arriba {
+      text-decoration: overline;
+      background-color: #397267;
+      border-radius: 20px;
+    }
+  
+    .subrayado-abajo {
+      text-decoration: underline;
+      background-color: #397267;
+      border-radius: 20px;
+    }
+
+/* FOOTER/PIE DE PAGINA */
+
+    footer {
+        background-color: rgb(167, 184, 184);
+        padding: 10px;
+        text-align: center;
+        align-content: center;
+        width: 100%;
+        color: #000;
+    }
+   
+    footer .footer-logo {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+    }
+
+    footer .footer-container .footer-logo img {
+        width: 50%;
+    }
+    
+    footer a {
+        text-decoration: none;
+        color: #2b2525;
+    }
+    
+    footer .footer-container .footer-links ul {
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+    }
+
+    footer ul li {
+        font-size: 15px;
+        margin-top: 15px;
+        list-style: none;
+    }
+
+
+    footer .footer-links ul {
+        justify-content: space-between;
+    }
+
+    footer .footer-container .footer-contact {
+        font-size: 15px;
+    }
+    
+    
+
+    footer .social-icons ul li a img {
+        width: 70%;        
+    }
+
+    footer .social-icons ul {
+        display: flex;
+        width: 90%;
+        gap: 15px;
+    }
+
+    /* .......PAGINA DE GRUPOS...... */
+
+    .main-grupos {
+      background-color: #F4F4F5;
+    }
+  
+  
+    main .titulogroup {
+      background-color: #5fa0aa;
+      color: #191f1e;
+      text-align: center;
+      text-shadow: 1px 1px 1px #000, -1px -1px 1px #fff;
+      border-radius: 20px;
+    }
+    main .titulogroup h2 {
+      font-size: 25px;
+    }
+    
+    .container-grupos {
+      display: grid;
+      grid-template-areas: 
+      "grupoa" 
+      "grupob"
+      "grupoc"
+      "grupod";
+      gap: 25px;
+    }
+  
+    #container-a {
+      grid-area: grupoa;
+      text-shadow: 1px 1px 1px #000, -1px -1px 1px #fff;
+      border-radius: 20px;
+      background-color:#FFFFFF;
+      border-style: groove;
+      width: 50%;
+    }
+  
+    #container-b {
+      grid-area: grupob;
+      text-shadow: 1px 1px 1px #000, -1px -1px 1px #fff;
+      border-radius: 20px;
+      background-color:#FFFFFF;
+      border-style: groove;
+    }
+  
+    #container-c {
+      grid-area: grupoc;
+      text-shadow: 1px 1px 1px #000, -1px -1px 1px #fff;
+      border-radius: 20px;
+      background-color:#FFFFFF;
+      border-style: groove;
+    }
+  
+    #container-d {
+      grid-area: grupod;
+      text-shadow: 1px 1px 1px #000, -1px -1px 1px #fff;
+      border-radius: 20px;
+      background-color:#FFFFFF;
+      border-style: groove;
+    }
+
 }
 
-#grilla nav ul {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-}
 
-#grilla nav ul li {
-    display: flex;
-    list-style-type: none;
-    /* padding: 60px; */
-    align-items: center;
-}
+@media screen and (min-width: 769px)   { 
 
-#grilla nav ul li a {
-    text-decoration: none;
-}
+    /* ENCABEZADO-HEADER */
 
-header {
-    grid-area: encabezado;
-    background-image: url(../assets/images/Pasto.jpg);
-    color: rgb(212, 190, 190);
-    background-position: center;
+    header {
+    background-image: url(/assets/images/Body/cieloargentino.jpg);
+    color: rgb(53, 10, 10); 
+    background-size: 100%;
+
     justify-content: center;
     text-align: center;
+    display: flex;  
+    }
+
+    /* IMAGEN LOGO HEADER */
+
+    header .containerheader {
+    width: 40%;
+    margin-right: 111px;
+    align-content: center;
+    }
+    
+    header .containerheader h6, header .containerheader h1,  header .containerheader h5 {
+    text-shadow: 1px 1px 1px #000, -1px -1px 1px #fff;
+    }
+
+    header .containerlogo {  
+    width: 12%;
+    align-content: center;
+    }
+      
+    header div img {
+    width:100%;
+    }
+
+/* BARRA NAVEGACION */
+  
+  .bg-color .container-fluid .navbar-menu {
+    justify-content: center;
+  }
+  
+  
+  .bg-color a {
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    text-shadow: 1px 1px 1px #000, -1px -1px 1px #fff;
+  }
+
+  .bg-color a:hover {
+    background-color: #fff;
+    border-radius: 20px;
+  }
+  
+  .bg-color {
+    font-style: italic;
+    font-weight: bold;
+    background-color: #C1DCD7;
+  }
+
+ /* BODY/MAIN */
+
+ main .sec-noticia {
+  display: flex;
+  padding: 15px;
+}
+
+main .sec-noticia .sec-noticia1 {
+  align-content: center;
+}
+
+main .sec-noticia .sec-noticia2 article div {
+  display: flex;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+main .sec-noticia .sec-noticia2 article div h4 {
+  text-align: center;
+  align-content: center;
+}
+
+main .sec-noticia .sec-noticia2 article div img {
+  border-radius: 10px;
+  width: 50%;
+}
+
+
+main .grilla {
+  display: grid;
+  grid-template-areas: 
+  "imagen1 imagen2 imagen3";
+}
+
+#imagen1 {
+  grid-area: imagen1;
+}
+
+#imagen2 {
+  grid-area: imagen2;
+}
+
+#imagen3 {
+  grid-area: imagen3;
+}
+
+.textcenter {
+  text-align: center;
+}
+
+
+.textnegrita {
+  font-weight: bold;
+}
+
+.subrayado-arriba {
+    text-decoration: overline;
+    background-color: #397267;
+    border-radius: 50px;
+}
+
+.subrayado-abajo {
+    text-decoration: underline;
+    background-color: #397267;
+    border-radius: 50px;
+}
+
+  
+  /* FOOTER/PIE DE PAGINA */
+  
+  footer {
+    background-color: rgb(167, 184, 184);
+    padding: 10px;
+    text-align: center;
+    align-content: center;
+    color: rgb(36, 32, 28);
+  }
+  
+  footer .footer-container {
+    display: flex;
+    justify-content: center ;
+    height: 50vh;
+  }
+
+
+  footer .footer-container .footer-logo {
+    width: 33%;
+    justify-content: center;
     display: flex;
     align-items: center;
-}
+ 
+  }
+  
+  footer .footer-container .footer-logo img {
+    width: 50%;
+    height: 60%;
+ 
+  }
+  
 
-header div {
-  width: 10%;
-}
+  footer .footer-container .footer-links {
+    width: 33%;
+    align-content: center;
+  }
 
-header div img {
-    width: 100%;
-}
 
-nav {
-    grid-area: navegation;
+  footer .footer-container .footer-links ul li a {
+    text-decoration: none;
+    color: #1d1616;
+    font-size: 22px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  footer .footer-container .footer-links ul li {
+    list-style: none;
+  }
+
+  footer .footer-container .footer-links ul {
+    margin-right: 40px;
+  }
+
+  footer .footer-container .footer-contact {
+    width: 33%;
+    align-content: center;
+  }
+
+  footer .footer-container .footer-contact p {
+    font-size: 18px;
+  }
+
+  footer .social-icons ul {
+    height: 100%;
     display: flex;
-}
+    margin-top: 40px;
+  }
+  
+  footer .social-icons ul li {
+    list-style: none;
+  }
 
-#section1 {
-    grid-area: primaria;
-}
+  footer .social-icons ul img {
+    width: 30%;
+  }
 
-#section2 {
-    grid-area: secundaria;
-}
+  /* ............GRUPOS............. */
 
-aside {
-    grid-area: aside;
-}
+  .main-grupos {
+    background-color: #F4F4F5;
+  }
 
-footer {
-    background-color: aqua;
-    padding: 55px;
+
+  main .titulogroup {
+    background-color: #5fa0aa;
+    color: #191f1e;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000, -1px -1px 1px #fff;
+    border-radius: 20px;
+    width: 50%;
+    margin-left: 25%;
+  }
+  main .titulogroup h2 {
+    font-size: 35px;
+  }
+  
+  .container-grupos {
+    display: grid;
+    grid-template-areas: 
+    "grupoa grupob"
+    "grupoc grupod";
+    /* justify-content: space-around; */
+    padding: 70px;
+    gap: 25px;
+  }
+
+  #container-a {
+    grid-area: grupoa;
+    text-shadow: 1px 1px 1px #000, -1px -1px 1px #fff;
+    border-radius: 20px;
+    background-color:#FFFFFF;
+    border-style: groove;
+  }
+
+  #container-b {
+    grid-area: grupob;
+    text-shadow: 1px 1px 1px #000, -1px -1px 1px #fff;
+    border-radius: 20px;
+    background-color:#FFFFFF;
+    border-style: groove;
+  }
+
+  #container-c {
+    grid-area: grupoc;
+    text-shadow: 1px 1px 1px #000, -1px -1px 1px #fff;
+    border-radius: 20px;
+    background-color:#FFFFFF;
+    border-style: groove;
+  }
+
+  #container-d {
+    grid-area: grupod;
+    text-shadow: 1px 1px 1px #000, -1px -1px 1px #fff;
+    border-radius: 20px;
+    background-color:#FFFFFF;
+    border-style: groove;
+  }
+
+  main section .container-grupos table {
+    width: 100%;
+  }
+
+  main section .container-grupos table thead tr th {
+    color: #e23434 ;
+    padding: 15px;
+  }
+
+  main section .container-grupos table tbody tr td .flex-banderas {
+    display: flex;
+    width: 100%;
+    gap: 12px;   
+    align-items: center;
+  }
+
+
+  /* BANDERAS DE PAISES */
+
+  main section .container-grupos table tbody tr td .flex-banderas div img{
+    width: 100%;
+    border-radius: 100%;
+    /* height: 100%; */
+  }
+
+  main section .container-grupos table tbody tr td .flex-banderas div {
+    width:20%;
+  }
+
+
+  /* TABLA */
+
+  main section .container-grupos div h3 {
+    margin: 15px;
+  }
+
+  main section .container-grupos table {
+    margin-bottom: 20px;
+  } 
+   
+  /* NO SE COMO HACER PARA QUE SE CENTRE EL TEXTO */
+
+  main section .container-grupos table tbody tr td {
+    padding: 15px;
+  }
+
 }
