@@ -1,7 +1,7 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Slab:ital@0;1&family=Playfair+Display:ital@0;1&display=swap');
@@ -45,6 +45,14 @@
     }
 
     /* BARRA NAVEGACION */
+
+    .container-fluid a {
+      width: 30%;
+    }
+
+    .navbar-brand img {
+      width: 50%;
+    }
 
     nav ul li a{
         font-size: 50px;
@@ -172,20 +180,23 @@
 
     .main-grupos {
       background-color: #F4F4F5;
+    
     }
   
   
-    main .titulogroup {
-      background-color: #5fa0aa;
+    main {
       color: #191f1e;
       text-align: center;
-      text-shadow: 1px 1px 1px #000, -1px -1px 1px #fff;
-      border-radius: 20px;
+      text-shadow: 1px 1px 1px #bdaeae, -1px -1px 1px #fff;
     }
-    main .titulogroup h2 {
-      font-size: 25px;
+    main h2 {
+      font-size: 35px;
+      font-family: sans-serif;
+      background-color: #161010;
+      padding: 15px;
+  
     }
-    
+
     .container-grupos {
       display: grid;
       grid-template-areas: 
@@ -193,7 +204,8 @@
       "grupob"
       "grupoc"
       "grupod";
-      gap: 25px;
+      gap: 5px;
+      padding: 3px;
     }
   
     #container-a {
@@ -202,7 +214,8 @@
       border-radius: 20px;
       background-color:#FFFFFF;
       border-style: groove;
-      width: 50%;
+      padding-bottom: 15px;
+
     }
   
     #container-b {
@@ -219,6 +232,7 @@
       border-radius: 20px;
       background-color:#FFFFFF;
       border-style: groove;
+
     }
   
     #container-d {
@@ -228,19 +242,99 @@
       background-color:#FFFFFF;
       border-style: groove;
     }
+    main section .container-grupos table thead tr th {
+      color: #e23434 ;
+      padding: 8px;
+      
+    }
 
+    main section .container-grupos table tbody {
+  
+    }
+
+    main section .container-grupos table tbody td {
+      padding: 15px 0px;
+      border-top: 1px solid #8f7979;
+    }
+    
+    main section .container-grupos #container-a table thead tr .column-th {
+      display: none;
+    }
+
+    main section .container-grupos #container-a table tbody tr .column-th {
+      display: none;
+    }
+
+    main section .container-grupos #container-b table thead tr .column-th {
+      display: none;
+    }
+
+    main section .container-grupos #container-b table tbody tr .column-th {
+      display: none;
+    }
+
+    main section .container-grupos #container-c table thead tr .column-th {
+      display: none;
+    }
+
+    main section .container-grupos #container-c table tbody tr .column-th {
+      display: none;
+    }
+
+    main section .container-grupos #container-d table thead tr .column-th {
+      display: none;
+    }
+
+    main section .container-grupos #container-d table tbody tr .column-th {
+      display: none;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    main section .container-grupos table tbody tr td .flex-banderas {
+      display: flex;
+      gap: 10px;         
+    }
+  
+    main section .container-grupos table tbody tr td .flex-banderas h5 {
+      font-size: 16px;
+    }
+  
+    /* BANDERAS DE PAISES */
+  
+    main section .container-grupos table tbody tr td .flex-banderas div img{
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      /* height: 100%; */
+    }
+  
+    main section .container-grupos table tbody tr td .flex-banderas div {
+      width: 20%;
+    }
 }
 
 
 @media screen and (min-width: 769px)   { 
+        /* INDEX/HOME */
 
     /* ENCABEZADO-HEADER */
 
     header {
-    background-image: url(/assets/images/Body/cieloargentino.jpg);
     color: rgb(53, 10, 10); 
+    background:linear-gradient(#56857c, transparent,#C1DCD7 ) ;
     background-size: 100%;
-
     justify-content: center;
     text-align: center;
     display: flex;  
@@ -289,17 +383,41 @@
   .bg-color {
     font-style: italic;
     font-weight: bold;
-    background-color: #C1DCD7;
+    background: linear-gradient(transparent,#C1DCD7, transparent);
   }
 
  /* BODY/MAIN */
 
  main .sec-noticia {
   display: flex;
-  padding: 15px;
+  padding: 20px;
+  gap: 10px;
+  background: linear-gradient(#C1DCD7, transparent);
 }
 
 main .sec-noticia .sec-noticia1 {
+  align-content: center;
+  box-shadow: 0 0 55px 0 #000;
+  width: 100%;
+}
+
+main .sec-noticia .sec-noticia1 article div img {
+  filter: drop-shadow(0 0 15px #000);
+  border-radius: 20px;
+  width:100%;
+}
+
+main .sec-noticia .sec-noticia1 article {
+  padding: 50px;
+}
+
+main .sec-noticia .sec-noticia2 {
+  box-shadow: 0 0 55px 0 #000;
+  width: 70%;
+}
+
+main .sec-noticia .sec-noticia2 article div h4 {
+  text-align: center;
   align-content: center;
 }
 
@@ -309,33 +427,39 @@ main .sec-noticia .sec-noticia2 article div {
   margin-left: 10px;
 }
 
-main .sec-noticia .sec-noticia2 article div h4 {
-  text-align: center;
-  align-content: center;
-}
 
 main .sec-noticia .sec-noticia2 article div img {
   border-radius: 10px;
   width: 50%;
+  filter: drop-shadow(0 0 15px #000);
 }
 
+/* main .sec-noticia .sec-noticia2 article div img:hover {
+  background-color: #000;
+} */
 
 main .grilla {
   display: grid;
   grid-template-areas: 
   "imagen1 imagen2 imagen3";
+  gap: 20px;
+  padding: 50px;
+
 }
 
 #imagen1 {
   grid-area: imagen1;
+  box-shadow: 0 0 55px 0 #000;
 }
 
 #imagen2 {
   grid-area: imagen2;
+  box-shadow: 0 0 55px 0 #000;
 }
 
 #imagen3 {
   grid-area: imagen3;
+  box-shadow: 0 0 55px 0 #000;
 }
 
 .textcenter {
@@ -363,7 +487,7 @@ main .grilla {
   /* FOOTER/PIE DE PAGINA */
   
   footer {
-    background-color: rgb(167, 184, 184);
+    background: linear-gradient(transparent,#C1DCD7);
     padding: 10px;
     text-align: center;
     align-content: center;
@@ -372,8 +496,6 @@ main .grilla {
   
   footer .footer-container {
     display: flex;
-    justify-content: center ;
-    height: 50vh;
   }
 
 
@@ -386,9 +508,7 @@ main .grilla {
   }
   
   footer .footer-container .footer-logo img {
-    width: 50%;
-    height: 60%;
- 
+    width: 100%;
   }
   
 
@@ -440,38 +560,39 @@ main .grilla {
   /* ............GRUPOS............. */
 
   .main-grupos {
-    background-color: #F4F4F5;
+    background:linear-gradient(#56857c, transparent,#C1DCD7 ) ;
+    padding-bottom: 100px;
   }
 
 
-  main .titulogroup {
-    background-color: #5fa0aa;
+  main {
     color: #191f1e;
     text-align: center;
-    text-shadow: 1px 1px 1px #000, -1px -1px 1px #fff;
-    border-radius: 20px;
-    width: 50%;
-    margin-left: 25%;
+    text-shadow: 1px 1px 1px #bdaeae, -1px -1px 1px #fff;
   }
-  main .titulogroup h2 {
+  main h2 {
     font-size: 35px;
+    font-family: sans-serif;
+    background-color: #161010;
+    padding: 15px;
+
   }
   
-  .container-grupos {
+  main section .container-grupos {
     display: grid;
     grid-template-areas: 
     "grupoa grupob"
     "grupoc grupod";
     /* justify-content: space-around; */
-    padding: 70px;
-    gap: 25px;
+    padding: 100px 20px;
+    gap: 10px;
   }
 
   #container-a {
     grid-area: grupoa;
     text-shadow: 1px 1px 1px #000, -1px -1px 1px #fff;
     border-radius: 20px;
-    background-color:#FFFFFF;
+    background-color:#cccaca;
     border-style: groove;
   }
 
@@ -479,7 +600,7 @@ main .grilla {
     grid-area: grupob;
     text-shadow: 1px 1px 1px #000, -1px -1px 1px #fff;
     border-radius: 20px;
-    background-color:#FFFFFF;
+    background-color:#cccaca;
     border-style: groove;
   }
 
@@ -487,7 +608,7 @@ main .grilla {
     grid-area: grupoc;
     text-shadow: 1px 1px 1px #000, -1px -1px 1px #fff;
     border-radius: 20px;
-    background-color:#FFFFFF;
+    background-color:#cccaca;
     border-style: groove;
   }
 
@@ -495,26 +616,27 @@ main .grilla {
     grid-area: grupod;
     text-shadow: 1px 1px 1px #000, -1px -1px 1px #fff;
     border-radius: 20px;
-    background-color:#FFFFFF;
+    background-color:#cccaca;
     border-style: groove;
-  }
-
-  main section .container-grupos table {
-    width: 100%;
   }
 
   main section .container-grupos table thead tr th {
     color: #e23434 ;
     padding: 15px;
+    
   }
 
   main section .container-grupos table tbody tr td .flex-banderas {
     display: flex;
     width: 100%;
-    gap: 12px;   
-    align-items: center;
+    gap: 5px;   
+    
   }
 
+  main section .container-grupos table tbody tr td .flex-banderas h5 {
+    
+    font-size: 16px;
+  }
 
   /* BANDERAS DE PAISES */
 
@@ -525,9 +647,12 @@ main .grilla {
   }
 
   main section .container-grupos table tbody tr td .flex-banderas div {
-    width:20%;
+    width: 20%;
   }
 
+  main section .container-grupos table tbody tr td  {
+    
+  }
 
   /* TABLA */
 
@@ -536,13 +661,81 @@ main .grilla {
   }
 
   main section .container-grupos table {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+  
   } 
    
   /* NO SE COMO HACER PARA QUE SE CENTRE EL TEXTO */
 
   main section .container-grupos table tbody tr td {
-    padding: 15px;
+    padding: 10px;
   }
+
+  main section .container-grupos table tbody tr {
+    border-top: 1px solid #7a7272;
+  } 
+
+  /* ............CONTACTO............. */
+
+
+  .main-contacto {
+    background-color: #191f1e;
+  }
+
+  .navbar-menu {
+    margin-right: 60px;
+  }
+
+  .navbar-brand {
+    width: 4%;
+  }
+
+  .navbar-brand img {
+    width: 100%;
+  }
+
+  .main-contacto section {
+    /* margin: 50px 0px; */
+    padding: 50px;
+  }
+  
+  .main-contacto section form {
+    text-align: center;
+    box-shadow: 0 0 35px #0006;
+    max-width: 750px;
+    margin: auto;
+  }
+
+  .main-contacto section form .form-input {
+    background-color: transparent;
+    box-shadow: 0 0 35px #0006;
+  }
+
+  .main-contacto section form .form-input input {
+    border-left:3px solid #397267;
+    width: 97%;
+    margin: 15px;
+    background: transparent;
+    border: 1px solid #cccaca;
+    padding: 6px 12px;
+    color: #26c7a9;
+  }
+
+  .main-contacto section form h2 {
+    text-align: center;
+    color: #C1DCD7;
+    margin-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .form-input {
+    background-color: transparent;
+    padding: 12px;
+    box-shadow: 0 0 35px #0006;
+   
+  }
+
+
+
 
 }
